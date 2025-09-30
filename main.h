@@ -4,7 +4,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-/* Prototype of your _printf function */
+/* Prototype of your _printf functions */
 int _printf(const char *format, ...);
 
 /* helper functions */
