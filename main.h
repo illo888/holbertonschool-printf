@@ -14,6 +14,7 @@ int print_string(va_list args);
 int print_percent(void);
 int print_integer(va_list args);
 int print_number(int n);
+int convert_binary(va_list args);
 
 
 #endif /* MAIN_H */
