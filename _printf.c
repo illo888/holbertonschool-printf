@@ -35,34 +35,15 @@ else if (format[i] == 'd' || format[i] == 'i')
 count += print_integer(args);
 else if (format[i] == 'b')
 count += convert_binary(args);
-if (format[i] == 'u') {
-unsigned int val = va_arg(args, unsigned int);
-char *str = convert(val, 10, 0);
-}
-else if (format[i] == 'o') {
-unsigned int val = va_arg(args, unsigned int);
-char *str = convert(val, 8, 0);
-}
-else if (format[i] == 'x') {
-unsigned int val = va_arg(args, unsigned int);
-char *str = convert(val, 16, 0);
-}
-else if (format[i] == 'X') {
-unsigned int val = va_arg(args, unsigned int);
-char *str = convert(val, 16, 1);
-}
-
 else
 {
 count += _putchar('%');
 count += _putchar(format[i]);
 }
-}
 else
 count += _putchar(format[i]);
 i++;
 }
-
 va_end(args);
 return (count);
 }
