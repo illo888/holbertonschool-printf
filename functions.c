@@ -101,4 +101,16 @@ int print_number(int n)
 
 	return (count);
 }
-
+/* Convert number to string in given base */
+char *convert(unsigned int num, int base, int uppercase) {
+    static char buffer[50];
+    char *digits = uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
+    int i = 49;
+    buffer[i--] = '\0';
+    if (num == 0) buffer[i--] = '0';
+    while (num > 0) {
+        buffer[i--] = digits[num % base];
+        num /= base;
+    }
+    return &buffer[i + 1];
+}
