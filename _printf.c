@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
                 count += print_hexadecimal(args);
             else if (format[i] == 'X')
                 count += print_HEXADECIMAL(args);
-            else if (format[i + 1] == 'S')
+            else if (format[i] == 'S')
                 count += print_special_string(args);
             else
             {
@@ -55,4 +55,5 @@ int _printf(const char *format, ...)
     va_end(args);
     return (count);
 }
+
 
