@@ -19,5 +19,7 @@ int print_octal(va_list args);
 int print_rot13(va_list args);
 int print_pointer(va_list args);
 int binary(unsigned int n);
+int print_reverse(va_list args);
 
 #endif /* MAIN_H */
+
