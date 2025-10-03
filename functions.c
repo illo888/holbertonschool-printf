@@ -11,11 +11,9 @@
 int print_char(va_list args)
 {
 	int c = va_arg(args, int);
-
 	_putchar(c);
 	return (1);
 }
-
 /**
  * print_string - print a string from the argumet list
  * @args: list of arguments
@@ -26,18 +24,14 @@ int print_string(va_list args)
 {
 	int i;
 	char *s = va_arg(args, char *);
-
 	if (s == NULL)
 		s = "(null)";
-
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		_putchar(s[i]);
 	}
-
 	return (i);
 }
-
 /**
  * print_percent - prints a percent sign
  *
@@ -46,10 +40,8 @@ int print_string(va_list args)
 int print_percent(void)
 {
 	_putchar('%');
-
 	return (1);
 }
-
 /**
  * print_integer - extracts integer from va_list and prints it
  * @args: list of arguments
@@ -59,10 +51,8 @@ int print_percent(void)
 int print_integer(va_list args)
 {
 	int n = va_arg(args, int);
-
 	return (print_number(n));
 }
-
 /**
  * print_number - prints an integer using recursion
  * @n: integer to print
@@ -72,12 +62,10 @@ int print_integer(va_list args)
 int print_number(int n)
 {
 	int count = 0;
-
 	if (n < 0)
 	{
 		_putchar('-');
 		count++;
-
 		if (n == INT_MIN)
 		{
 			count += print_number(INT_MAX / 10);
@@ -86,7 +74,6 @@ int print_number(int n)
 		}
 		n = -n;
 	}
-
 	if (n < 10)
 	{
 		_putchar(n + '0');
@@ -98,19 +85,5 @@ int print_number(int n)
 		_putchar(n % 10 + '0');
 		count++;
 	}
-
 	return (count);
-}
-/* Convert number to string in given base */
-char *convert(unsigned int num, int base, int uppercase) {
-    static char buffer[50];
-    char *digits = uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
-    int i = 49;
-    buffer[i--] = '\0';
-    if (num == 0) buffer[i--] = '0';
-    while (num > 0) {
-        buffer[i--] = digits[num % base];
-        num /= base;
-    }
-    return &buffer[i + 1];
 }
