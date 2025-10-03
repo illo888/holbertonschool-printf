@@ -28,5 +28,7 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("%b\n", 1024);
     _printf("%S\n", "Best\nSchool");
+    int x = 42;
+    _printf("Address: %p\n", &x);
     return (0);
 }
