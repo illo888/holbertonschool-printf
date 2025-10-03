@@ -16,4 +16,5 @@ int print_integer(va_list args);
 int print_number(int n);
 int convert_binary(va_list args);
 int print_octal(va_list args);
+int print_rot13(va_list args);
 #endif /* MAIN_H */
