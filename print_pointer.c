@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdint.h>
 
 /**
  * print_pointer - Prints pointer address
@@ -9,7 +10,7 @@
 int print_pointer(va_list args)
 {
 	void *ptr = va_arg(args, void *);
-	unsigned long addr = (unsigned long)ptr;
+	uintptr_t addr = (uintptr_t)ptr;
 	int count = 0;
 	char buffer[32];
 	int i = 0;

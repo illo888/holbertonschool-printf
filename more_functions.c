@@ -1,41 +1,35 @@
 #include "main.h"
 /**
- * convert_binary - to convert number to binary
- * @args: list of arguments
+ * convert_binary - Handles %b specifier in _printf
+ * @args: list of arguments from _printf (expects unsigned int)
  *
  * Return: number of characters printed
  */
 
 int convert_binary(va_list args)
 {
-	unsigned int i = va_arg(args, unsigned int);
+	unsigned int n = va_arg(args, unsigned int);
+
+	if (n == 0)
+		return (_putchar('0'));
+
+	return (binary(n));
+}
+
+/**
+ * binary - Helper function to print binary recursively
+ * @n: unsigned int to convert to binary
+ *
+ * Return: number of characters printed
+ */
+int binary(unsigned int n)
+{
 	int count = 0;
-	unsigned int a[7];
-	int j = 7;
-	int k;
 
-	while (i > 0)
-	{
+	if (n / 2)
+		count += binary(n / 2);
 
-		if (i % 2 == 0)
-		{
-			a[j] = 0;
-			count++;
-			j--;
-		}
-		else if (i % 2 == 1)
-		{
-			a[j] = 1;
-			count++;
-			j--;
-		}
-		i /= 2;
-	}
+	count += _putchar((n % 2) + '0');
 
-	j = j + 1;
-	for (k = 0; k < count; k++)
-	{
-		_putchar(a[j + k] + '0');
-	}
 	return (count);
 }
