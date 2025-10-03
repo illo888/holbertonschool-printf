@@ -42,6 +42,8 @@ int _printf(const char *format, ...)
                 count += print_HEXADECIMAL(args);
             else if (format[i] == 'S')
                 count += print_special_string(args);
+            else if (format[i] == 'p')
+                count += print_pointer(args);
             else
             {
                 count += _putchar('%');
@@ -55,5 +57,6 @@ int _printf(const char *format, ...)
     va_end(args);
     return (count);
 }
+
 
 
