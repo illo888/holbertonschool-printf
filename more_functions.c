@@ -35,6 +35,40 @@ int convert_binary(va_list args)
 	j = j + 1;
 	for (k = 0; k < count; k++)
 	{
+		int convert_binary(va_list args)
+{
+	/**
+ * convert_binary - Converts an unsigned int to binary and prints it
+ * @args: Argument list containing the unsigned int
+ *
+ * Return: Number of characters printed
+ */
+
+    unsigned int n = va_arg(args, unsigned int);
+    int i, count = 0;
+    int binary[32];
+
+    if (n == 0)
+    {
+        _putchar('0');
+        return (1);
+    }
+
+    for (i = 0; n > 0; i++)
+    {
+        binary[i] = n % 2;
+        n /= 2;
+    }
+
+    while (i--)
+    {
+        _putchar(binary[i] + '0');
+        count++;
+    }
+
+    return (count);
+}
+
 		_putchar(a[j + k] + '0');
 	}
 	return (count);
