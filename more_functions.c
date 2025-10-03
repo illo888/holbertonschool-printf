@@ -165,3 +165,38 @@ int print_special_string(va_list args)
 
     return (count);
 }
+/**
+ * print_pointer - Prints a pointer address in hexadecimal format
+ * @args: Argument list containing the pointer
+ *
+ * Return: Number of characters printed
+ */
+int print_pointer(va_list args)
+{
+    void *ptr = va_arg(args, void *);
+    unsigned long addr = (unsigned long)ptr;
+    char *str;
+    int i = 0;
+
+    if (ptr == NULL)
+    {
+        str = "(nil)";
+        while (str[i])
+        {
+            _putchar(str[i]);
+            i++;
+        }
+        return (i);
+    }
+
+    _putchar('0');
+    _putchar('x');
+    str = convert(addr, 16, 1); // lowercase hex
+    while (str[i])
+    {
+        _putchar(str[i]);
+        i++;
+    }
+
+    return (i + 2); // +2 for "0x"
+}
