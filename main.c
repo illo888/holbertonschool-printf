@@ -30,5 +30,9 @@ int main(void)
     _printf("%S\n", "Best\nSchool");
     int x = 42;
     _printf("Address: %p\n", &x);
+    _printf("%+d\n", 42);   // يطبع: +42
+    _printf("% d\n", 42);   // يطبع:  42
+    _printf("%#x\n", 255);  // يطبع: 0xff
+
     return (0);
 }
