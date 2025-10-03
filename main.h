@@ -23,4 +23,7 @@ int print_hexadecimal(va_list args);
 int print_hex(unsigned int n);
 int print_HEXADECIMAL(va_list args);
 int print_HEX(unsigned int n);
+int print_special_string(va_list args);
+
 #endif /* MAIN_H */
+
