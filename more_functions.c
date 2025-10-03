@@ -127,3 +127,41 @@ int print_HEX(unsigned int n)
     count += _putchar(HEX[n % 16]);
     return (count);
 }
+/**
+ * print_special_string - Prints a string, replacing non-printable chars
+ * @args: Argument list containing the string
+ *
+ * Return: Number of characters printed
+ */
+int print_special_string(va_list args)
+{
+    char *str = va_arg(args, char *);
+    int i = 0, count = 0;
+    char hex[3];
+
+    if (str == NULL)
+        str = "(null)";
+
+    while (str[i])
+    {
+        if ((str[i] < 32 || str[i] >= 127))
+        {
+            _putchar('\\');
+            _putchar('x');
+            hex[0] = "0123456789ABCDEF"[(str[i] >> 4) & 0xF];
+            hex[1] = "0123456789ABCDEF"[str[i] & 0xF];
+            hex[2] = '\0';
+            _putchar(hex[0]);
+            _putchar(hex[1]);
+            count += 4;
+        }
+        else
+        {
+            _putchar(str[i]);
+            count++;
+        }
+        i++;
+    }
+
+    return (count);
+}
