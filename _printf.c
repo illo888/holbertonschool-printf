@@ -35,10 +35,11 @@ count += convert_binary(args);
 else if (format[i] == 'X') {
 count += convert_binary(args);
 }
-else if (format[i] == 'b')
-count += convert_binary(args);
-else
+else if (format[i + 1] == 'b')
 {
+    count += convert_binary(args);
+    i++;
+}
 count += _putchar('%');
 count += _putchar(format[i]);
 }
