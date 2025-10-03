@@ -10,9 +10,9 @@
  */
 int print_char(va_list args)
 {
-	int c = va_arg(args, int);
-	_putchar(c);
-	return (1);
+    int c = va_arg(args, int);
+    _putchar(c);
+    return (1);
 }
 /**
  * print_string - print a string from the argumet list
@@ -22,15 +22,15 @@ int print_char(va_list args)
  */
 int print_string(va_list args)
 {
-	int i;
-	char *s = va_arg(args, char *);
-	if (s == NULL)
-		s = "(null)";
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		_putchar(s[i]);
-	}
-	return (i);
+    int i;
+    char *s = va_arg(args, char *);
+    if (s == NULL)
+        s = "(null)";
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        _putchar(s[i]);
+    }
+    return (i);
 }
 /**
  * print_percent - prints a percent sign
@@ -39,8 +39,8 @@ int print_string(va_list args)
  */
 int print_percent(void)
 {
-	_putchar('%');
-	return (1);
+    _putchar('%');
+    return (1);
 }
 /**
  * print_integer - extracts integer from va_list and prints it
@@ -50,8 +50,8 @@ int print_percent(void)
  */
 int print_integer(va_list args)
 {
-	int n = va_arg(args, int);
-	return (print_number(n));
+    int n = va_arg(args, int);
+    return (print_number(n));
 }
 /**
  * print_number - prints an integer using recursion
@@ -61,29 +61,29 @@ int print_integer(va_list args)
  */
 int print_number(int n)
 {
-	int count = 0;
-	if (n < 0)
-	{
-		_putchar('-');
-		count++;
-		if (n == INT_MIN)
-		{
-			count += print_number(INT_MAX / 10);
-			_putchar('8');
-			return (count + 1);
-		}
-		n = -n;
-	}
-	if (n < 10)
-	{
-		_putchar(n + '0');
-		count++;
-	}
-	else
-	{
-		count += print_number(n / 10);
-		_putchar(n % 10 + '0');
-		count++;
-	}
-	return (count);
+    int count = 0;
+    if (n < 0)
+    {
+        _putchar('-');
+        count++;
+        if (n == INT_MIN)
+        {
+            count += print_number(INT_MAX / 10);
+            _putchar('8');
+            return (count + 1);
+        }
+        n = -n;
+    }
+    if (n < 10)
+    {
+        _putchar(n + '0');
+        count++;
+    }
+    else
+    {
+        count += print_number(n / 10);
+        _putchar(n % 10 + '0');
+        count++;
+    }
+    return (count);
 }
