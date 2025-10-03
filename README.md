@@ -11,14 +11,15 @@ It handles formatted output using variadic functions.
 - `%s` : Print a string
 - `%%` : Print a percent sign
 - `%d` / `%i` : Print integers
-- '%u':Unsigned decimal integer	✅ Added (print_unsigned)
-- '%o' :Octal representation	✅ Added (print_octal)
-- '%x'	Hexadecimal (lowercase)	✅ Added (print_hexadecimal)
-- '%X'	Hexadecimal (uppercase)	✅ Added (print_HEXADECIMAL)
+- `%u`: Print a Unsigned decimal integer
+- `%o` : Print a Octal representation	
+- `%x`	: Print a Hexadecimal (lowercase)	
+- `%X`	: Print a Hexadecimal (uppercase)	
 
 ---
 
 ## Compilation
 ```bash
 gcc -Wall -Werror -Wextra -pedantic *.c -o printf_test
+
 
