@@ -191,12 +191,12 @@ int print_pointer(va_list args)
 
     _putchar('0');
     _putchar('x');
-    str = convert(addr, 16, 1); // lowercase hex
+    str = convert(addr, 16, 1); /* lowercase hex */
     while (str[i])
     {
         _putchar(str[i]);
         i++;
     }
 
-    return (i + 2); // +2 for "0x"
+    return (i + 2);
 }
