@@ -98,6 +98,9 @@ Output:
 ## Compilation
 ```bash
 gcc -Wall -Werror -Wextra -pedantic *.c -o printf_test
+```
+![My Logo]([https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTh5NjJsam5veHN4MXB2em1xODV1azdkb2E[…]YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/BYoRqTmcgzHcL9TCy1/giphy.gif))
+
 
 
 
