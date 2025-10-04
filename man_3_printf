@@ -27,6 +27,18 @@ Prints a percent sign.
 .TP
 .B %d, %i
 Prints a signed decimal integer (with support for negative numbers).
+.TP
+.B %u
+Print a Unsigned decimal integer
+.Tp
+.B %o
+Print a Octal representation
+.TP
+.B %x
+Print a Hexadecimal (lowercase)
+.TP
+.B %X
+Print a Hexadecimal (uppercase)
 .SH RETURN VALUE
 On success,
 .B _printf
