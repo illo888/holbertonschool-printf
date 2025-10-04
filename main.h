@@ -26,10 +26,13 @@ int print_HEX(unsigned int n);
 int print_special_string(va_list args);
 int print_pointer(va_list args);
 char *convert(unsigned long num, int base, int lowercase);
+int print_rot13(va_list args);
+
 
 
 
 #endif /* MAIN_H */
+
 
 
 
