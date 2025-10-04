@@ -34,6 +34,8 @@ int main(void)
     _printf("% d\n", 42);   // يطبع:  42
     _printf("%#x\n", 255);  // يطبع: 0xff
     _printf("%r\n", "Hello, Shaden!"); // Uryyb, Funqra!
+    _printf("%R\n", "Hello, Shaden!"); // يطبع: Uryyb, Funqra!
+
 
 
     return (0);
