@@ -200,3 +200,33 @@ int print_pointer(va_list args)
 
     return (i + 2);
 }
+/**
+ * print_rot13 - Prints a string encoded in ROT13
+ * @args: Argument list containing the string
+ *
+ * Return: Number of characters printed
+ */
+int print_rot13(va_list args)
+{
+    char *str = va_arg(args, char *);
+    int i = 0, count = 0;
+    char c;
+
+    if (str == NULL)
+        str = "(null)";
+
+    while (str[i])
+    {
+        c = str[i];
+        if ((c >= 'A' && c <= 'Z'))
+            c = ((c - 'A' + 13) % 26) + 'A';
+        else if ((c >= 'a' && c <= 'z'))
+            c = ((c - 'a' + 13) % 26) + 'a';
+
+        _putchar(c);
+        count++;
+        i++;
+    }
+
+    return (count);
+}
