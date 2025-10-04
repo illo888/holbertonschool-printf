@@ -33,6 +33,8 @@ int main(void)
     _printf("%+d\n", 42);   // يطبع: +42
     _printf("% d\n", 42);   // يطبع:  42
     _printf("%#x\n", 255);  // يطبع: 0xff
+    _printf("%r\n", "Hello, Shaden!"); // Uryyb, Funqra!
+
 
     return (0);
 }
