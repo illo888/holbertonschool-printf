@@ -99,7 +99,9 @@ Output:
 ```bash
 gcc -Wall -Werror -Wextra -pedantic *.c -o printf_test
 ```
-![Thank you for reading]([[https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTh5NjJsam5veHN4MXB2em1xODV1azdkb2E[…]YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/BYoRqTmcgzHcL9TCy1/giphy.gif)](https://i.giphy.com/BYoRqTmcgzHcL9TCy1.webp))
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTh5NjJsam5veHN4MXB2em1xODV1azdkb2E0cHZ0MGFjdDJodXFwOCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/BYoRqTmcgzHcL9TCy1/giphy.gif" alt="GIF" width="400"/>
+
+
 
 
 
