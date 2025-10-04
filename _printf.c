@@ -44,6 +44,8 @@ int _printf(const char *format, ...)
                 count += print_special_string(args);
             else if (format[i] == 'p')
                 count += print_pointer(args);
+            else if (format[i] == 'r')
+                 count += print_rot13(args);
             else
             {
                 count += _putchar('%');
@@ -57,6 +59,7 @@ int _printf(const char *format, ...)
     va_end(args);
     return (count);
 }
+
 
 
 
