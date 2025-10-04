@@ -14,7 +14,11 @@ It handles formatted output using variadic functions.
 - `%u`: Print a Unsigned decimal integer
 - `%o` : Print a Octal representation	
 - `%x`	: Print a Hexadecimal (lowercase)	
-- `%X`	: Print a Hexadecimal (uppercase)	
+- `%X`	: Print a Hexadecimal (uppercase)
+- `%S` : Print string with non-printables as \xXX
+- `%p` : Print pointer address
+- `%r` : Print reversed string
+- `%R` : Print ROT13-encoded string
 
 ---
 ## Examples
@@ -58,10 +62,43 @@ Output
 ```bash
 100% complete!
 ```
+Exmaple 6:
+```bash
+_printf("%S\n", "Best\nSchool");
+```
+Output:
+```bash
+Best\x0ASchool
+```
+Example 7:
+```bash
+_printf("%r\n", "Shaden");
+```
+Output:
+```bash
+nedahS
+```
+Example 8:
+```bash
+_printf("%R\n", "Hello");
+```
+Output:
+```bash
+Uryyb
+```
+Example 9:
+```bash
+_printf("%p", ptr);
+```
+Output:
+```bash
+0x7ffeefbff5ac
+```
 ---
 ## Compilation
 ```bash
 gcc -Wall -Werror -Wextra -pedantic *.c -o printf_test
+
 
 
 
